@@ -27,7 +27,7 @@
 
 ### Ответ:
 systemctl status memcached  
-https://github.com/Borobov/sdb-homeworks/blob/main/IMG-11-02/img-02.jpg
+![Задение 2](https://github.com/Borobov/sdb-homeworks/blob/main/IMG-11-02/img-02.jpg)
 
 ---
 
