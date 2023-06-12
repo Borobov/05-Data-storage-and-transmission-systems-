@@ -79,3 +79,10 @@ systemctl status memcached
 *Приведите скриншот, где будут проделаны все операции и будет видно, что значение key5 стало равно 10.*
 
 ### Ответ:
+
+1. Установил ключ key5 со значением 5: set key5 5  
+2. Проверил значение ключа key5: get key5  
+3. Увеличил значение ключа key5 на 5, командой INCRBY: INCRBY key5 5  
+4. Проверил новое значение ключа key5: get key5  
+
+![Доп.задание](https://github.com/Borobov/sdb-homeworks/blob/main/IMG-11-02/img-05-1.jpg)
