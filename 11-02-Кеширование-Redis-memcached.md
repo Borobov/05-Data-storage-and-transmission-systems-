@@ -56,6 +56,12 @@ systemctl status memcached
 *Через redis-cli достаньте все записанные ключи и значения из базы, приведите скриншот этой операции.*
 
 ### Ответ:
+1. Подключился к консоли redis: redis-cli  
+2. Установил значение с ключами test:1:* : set test:1:string1 "Netology 2023" и set test:1:string2 "Borobov IS"  
+3. Получил список ключей: keys test:1:*  
+4. Вывел значения присвоенные ключам: get test:1:string1 и get test:1:string2  
+
+![Задание 4](https://github.com/Borobov/sdb-homeworks/blob/main/IMG-11-02/img-04.jpg)
 
 ---
 
