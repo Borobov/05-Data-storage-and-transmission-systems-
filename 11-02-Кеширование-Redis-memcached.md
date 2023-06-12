@@ -63,6 +63,9 @@ systemctl status memcached
 
 ![Задание 4](https://github.com/Borobov/sdb-homeworks/blob/main/IMG-11-02/img-04.jpg)
 
+5. Вывел все значения ключей: mget test:1:string1 test:1:string2  
+![Задание 4-1](https://github.com/Borobov/sdb-homeworks/blob/main/IMG-11-02/img-04-1.jpg)
+
 ---
 
 ## Дополнительные задания (со звёздочкой*)
