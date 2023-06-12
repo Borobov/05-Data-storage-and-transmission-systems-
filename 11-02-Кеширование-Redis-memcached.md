@@ -28,7 +28,7 @@
 ### Ответ:
 systemctl status memcached  
 
-![Задение 2](https://github.com/Borobov/sdb-homeworks/blob/main/IMG-11-02/img-02.jpg)
+![Задание 2](https://github.com/Borobov/sdb-homeworks/blob/main/IMG-11-02/img-02.jpg)
 
 ---
 
@@ -42,8 +42,8 @@ systemctl status memcached
 1. Подключился к memcached c помощью telnet: telnet localhost 11211  
 2. Установил key1 с ttl=30 и значением netology1: add key1 0 30 9 -> netology1 (где 9 это размер данных: netology1)  
 3. Проверил, что данные попали в БД: get key1, получил в ответ netology1
-4. Установил key2 с ttl=5 и занчением netology2: add key1 0 5 9 -> netology2 (где 9 это размер данных: netology2)  
-5. Проверил данных через get key1 и get key2, ответ пустой, так как ремя ttl истекло и данные очистились.  
+4. Установил key2 с ttl=5 и значением netology2: add key1 0 5 9 -> netology2 (где 9 это размер данных: netology2)  
+5. Проверил данных через get key1 и get key2, ответ пустой, так как время ttl истекло и данные очистились.  
 
 ![Задание 3](https://github.com/Borobov/sdb-homeworks/blob/main/IMG-11-02/img-03.jpg)
 
