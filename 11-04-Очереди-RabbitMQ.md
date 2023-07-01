@@ -13,6 +13,7 @@
 
 ### Ответ:
 
+![web babbitMQ](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/27c8f34befa42a7bd5810d13bcb81532ae0f40e3/IMG-11-04/11-04-01.png)
 
 ---
 
@@ -37,6 +38,8 @@ $ pip install pika
 
 ### Ответ:
 
+![web_queue](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/27c8f34befa42a7bd5810d13bcb81532ae0f40e3/IMG-11-04/11-04-02.png)
+![cmd_consumer.py](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/27c8f34befa42a7bd5810d13bcb81532ae0f40e3/IMG-11-04/11-04-03.png)
 
 ---
 
@@ -75,15 +78,12 @@ $ rabbitmqadmin get queue='hello'
 
 ### Ответ:
 
+
+[](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/27c8f34befa42a7bd5810d13bcb81532ae0f40e3/IMG-11-04/11-04-04.png)
+[](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/27c8f34befa42a7bd5810d13bcb81532ae0f40e3/IMG-11-04/11-04-05.png)
+[](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/27c8f34befa42a7bd5810d13bcb81532ae0f40e3/IMG-11-04/11-04-06.png)
+[](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/27c8f34befa42a7bd5810d13bcb81532ae0f40e3/IMG-11-04/11-04-07.png)
+
 ---
 
-## Дополнительные задания (со звёздочкой*)
-Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
-
-### * Задание 4. Ansible playbook
-
-Напишите плейбук, который будет производить установку RabbitMQ на любое количество нод и объединять их в кластер.
-При этом будет автоматически создавать политику ha-all.
-
-*Готовый плейбук разместите в своём репозитории.*
 
