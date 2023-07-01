@@ -2,6 +2,9 @@
 
 ### Боробов Иван
 
+[consumer.py](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/bf1975c9dfe476f076b975b74a677c5e549b45f2/CONF-11-04/consumer.py)
+[producer.py](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/bf1975c9dfe476f076b975b74a677c5e549b45f2/CONF-11-04/producer.py)
+
 ---
 
 ### Задание 1. Установка RabbitMQ
