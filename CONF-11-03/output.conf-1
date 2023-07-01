@@ -1,0 +1,6 @@
+output {
+        elasticsearch {
+            hosts => "192.168.31.150:9200"
+            data_stream => "true"
+        }
+}

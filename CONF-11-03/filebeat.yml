@@ -1,0 +1,10 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/nginx/access.log
+processors:
+  - drop_fields:
+      fields: ["beat", "input_type", "prospector", "input", "host", "agent", "ecs"]
+output.logstash:
+  hosts: ["192.168.31.143:5044"]
