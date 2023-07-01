@@ -90,6 +90,11 @@ rabbitmqadmin get queue='hello'
 
 ![](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/27c8f34befa42a7bd5810d13bcb81532ae0f40e3/IMG-11-04/11-04-07.png)
 
+Проверка действующих политик  
+rabbitmqctl list_policies  
+
+![](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/34dd8c483108fdf67d46c42f2fbb3d21e9a405d8/IMG-11-04/11-04-08.png)
+
 ---
 
 
