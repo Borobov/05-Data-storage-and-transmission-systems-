@@ -78,7 +78,7 @@ $ rabbitmqadmin get queue='hello'
 
 ### Ответ:
 
-
+rabbitmqctl cluster_status  
 ![](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/27c8f34befa42a7bd5810d13bcb81532ae0f40e3/IMG-11-04/11-04-04.png)
 ![](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/27c8f34befa42a7bd5810d13bcb81532ae0f40e3/IMG-11-04/11-04-05.png)
 ![](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/27c8f34befa42a7bd5810d13bcb81532ae0f40e3/IMG-11-04/11-04-06.png)
