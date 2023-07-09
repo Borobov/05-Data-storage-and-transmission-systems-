@@ -33,7 +33,7 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 ### Ответ:
 1. Установка mysql
-2. 
+
 sudo apt update  
 sudo apt upgrade  
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb  
