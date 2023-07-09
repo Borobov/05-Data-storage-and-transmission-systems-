@@ -96,16 +96,16 @@ customer         | customer_id
 ```
 Название таблицы      |  Название первичного ключа
 actor                 |  actor_id
-actor_info            | 
+actor_info            |  
 address               |  address_id
 category              |  category_id
 city                  |  city_id
 country               |  country_id
 customer              |  customer_id
-customer_list         |
+customer_list         |  
 film                  |  film_id
-film_actor            |
-film_category         |
+film_actor            |  actor_id, film_id
+film_category         |  film_id, category_id
 film_list             |
 film_text             |
 inventory             |  inventory_id
