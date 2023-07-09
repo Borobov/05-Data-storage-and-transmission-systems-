@@ -1,4 +1,4 @@
-# Домашнее задание к занятию «Работа с данными (DDL/DML)»
+![изображение](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/assets/122168309/40a0a6ea-27d0-4416-a58e-e3df55afca87)# Домашнее задание к занятию «Работа с данными (DDL/DML)»
 
 ### Боробов Иван Сергеевич
 
@@ -72,7 +72,7 @@ SHOW GRANTS FOR 'sys_temp'@'localhost'; - проверю права доступ
 img
 mysql -u sys_temp -p - подключился к БД под sys_temp
 mysql> ALTER USER 'sys_temp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'netology2023'; - смены типа аутентификации с sha2
-
+```
 
 ### Задание 2
 Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца: в первом должны быть названия таблиц восстановленной базы, во втором названия первичных ключей этих таблиц. Пример: (скриншот/текст)
@@ -80,6 +80,36 @@ mysql> ALTER USER 'sys_temp'@'localhost' IDENTIFIED WITH mysql_native_password B
 Название таблицы | Название первичного ключа
 customer         | customer_id
 ```
+### Ответ
+```
+Название таблицы      | Название первичного ключа
+actor                 | actor_id
+actor_info            | 
+address               | address_id
+category              | category_id
+city                  | city_id
+country               | country_id
+customer              | customer_id
+customer_list         |
+film                  |  film_id
+film_actor            |
+film_category         |
+film_list             |
+film_text             |
+inventory             |  inventory_id
+language              |  language_id
+nicer_but_slower_film_list|
+payment               |  payment_id
+rental                |  rental_id
+sales_by_film_category|
+sales_by_store        |
+staff                 |  staff_id
+staff_list            |
+store                 |  store_id
+
+
+```
+
 
 
 ## Дополнительные задания (со звёздочкой*)
