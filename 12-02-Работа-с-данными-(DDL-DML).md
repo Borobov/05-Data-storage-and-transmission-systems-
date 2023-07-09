@@ -56,6 +56,23 @@ systemctl status mysql
              └─5423 /usr/sbin/mysqld
 ```
 
+2. Проверяю списоу существующих пользователей
+```
+mysql -u root -p
+SELECT User, Host FROM mysql.user; - полчил список всех пользователей
+CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'netology2023'; - создал пользователя sys_temp с паролем netology2023;
+CREATE USER 'sys_temp'@'192.168.31.141' IDENTIFIED BY 'netology2023'; - создал пользователя sys_temp с паролем netology2023, где 192.168.31.141 - адрес клиента откуда будет подключаться DBeaver, в случаес, если планируеи подключаться не с машины отличной от сервер;
+
+SHOW GRANTS FOR 'sys_temp'@'localhost'; - проверю права доступа
+img
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost'; - выдал полные права
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'192.168.31.141'; - выдал полные права, где 192.168.31.141 - адрес клиента откуда будет подключаться DBeaver, в случаес, если планируеи подключаться не с машины отличной от сервер;
+
+SHOW GRANTS FOR 'sys_temp'@'localhost'; - проверю права доступа;
+img
+mysql -u sys_temp -p - подключился к БД под sys_temp
+mysql> ALTER USER 'sys_temp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'netology2023'; - смены типа аутентификации с sha2
+
 
 ### Задание 2
 Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца: в первом должны быть названия таблиц восстановленной базы, во втором названия первичных ключей этих таблиц. Пример: (скриншот/текст)
