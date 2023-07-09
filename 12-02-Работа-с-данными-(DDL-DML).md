@@ -31,6 +31,31 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
 
+### Ответ:
+1. Установка mysql
+```
+sudo apt update
+sudo apt upgrade
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb
+sudo apt install ./mysql-apt-config_0.8.22-1_all.deb
+sudo apt update
+sudo apt install mysql-server
+systemctl status mysql
+
+ mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2023-07-09 02:35:25 EDT; 1min 16s ago
+       Docs: man:mysqld(8)
+             http://dev.mysql.com/doc/refman/en/using-systemd.html
+   Main PID: 5423 (mysqld)
+     Status: "Server is operational"
+      Tasks: 37 (limit: 4643)
+     Memory: 366.4M
+        CPU: 1.263s
+     CGroup: /system.slice/mysql.service
+             └─5423 /usr/sbin/mysqld
+```
+
 
 ### Задание 2
 Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца: в первом должны быть названия таблиц восстановленной базы, во втором названия первичных ключей этих таблиц. Пример: (скриншот/текст)
