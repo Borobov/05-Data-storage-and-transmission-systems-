@@ -54,7 +54,7 @@ SELECT User, Host FROM mysql.user; - получил список всех пол
 
 
 CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'netology2023'; - создал пользователя sys_temp с паролем netology2023;  
-CREATE USER 'sys_temp'@'192.168.31.141' IDENTIFIED BY 'netology2023'; - создал пользователя sys_temp с паролем netology2023, где 192.168.31.141 - адрес клиента откуда будет подключаться DBeaver, в случае, если планируем подключаться с машины отличной от сервер;  
+CREATE USER 'sys_temp'@'192.168.31.141' IDENTIFIED BY 'netology2023'; - создал пользователя sys_temp с паролем netology2023, где 192.168.31.141 - адрес клиента откуда будет подключаться DBeaver, в случае, если планируем подключаться с машины отличной от сервера;  
 
 
 ![2](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-2.png)
@@ -67,7 +67,7 @@ SHOW GRANTS FOR 'sys_temp'@'localhost'; - проверю права доступ
 
 
 GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost'; - выдал полные права  
-GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'192.168.31.141'; - выдал полные права, где 192.168.31.141 - адрес клиента откуда будет подключаться DBeaver, в случае, если планируем подключаться с машины отличной от сервер;  
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'192.168.31.141'; - выдал полные права, где 192.168.31.141 - адрес клиента откуда будет подключаться DBeaver, в случае, если планируем подключаться с машины отличной от сервера;  
 SHOW GRANTS FOR 'sys_temp'@'localhost'; - проверю права доступа;  
 
 
