@@ -82,14 +82,14 @@ customer         | customer_id
 ```
 ### Ответ
 ```
-Название таблицы      | Название первичного ключа
-actor                 | actor_id
+Название таблицы      |  Название первичного ключа
+actor                 |  actor_id
 actor_info            | 
-address               | address_id
-category              | category_id
-city                  | city_id
-country               | country_id
-customer              | customer_id
+address               |  address_id
+category              |  category_id
+city                  |  city_id
+country               |  country_id
+customer              |  customer_id
 customer_list         |
 film                  |  film_id
 film_actor            |
