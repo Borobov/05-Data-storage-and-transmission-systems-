@@ -33,52 +33,52 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 ### Ответ:
 1. Установка mysql
-```
-sudo apt update
-sudo apt upgrade
-wget https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb
-sudo apt install ./mysql-apt-config_0.8.22-1_all.deb
-sudo apt update
-sudo apt install mysql-server
-systemctl status mysql
-```
+2. 
+sudo apt update  
+sudo apt upgrade  
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb  
+sudo apt install ./mysql-apt-config_0.8.22-1_all.deb  
+sudo apt update  
+sudo apt install mysql-server  
+systemctl status mysql  
+
 ![0](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-0.png)
 
 2. Проверяю список существующих пользователей
-```
-mysql -u root -p
-SELECT User, Host FROM mysql.user; - получил список всех пользователей
-```
+ 
+mysql -u root -p  
+SELECT User, Host FROM mysql.user; - получил список всех пользователей  
+
 
 ![1](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-1.png)
 
-```
-CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'netology2023'; - создал пользователя sys_temp с паролем netology2023;
-CREATE USER 'sys_temp'@'192.168.31.141' IDENTIFIED BY 'netology2023'; - создал пользователя sys_temp с паролем netology2023, где 192.168.31.141 - адрес клиента откуда будет подключаться DBeaver, в случаес, если планируеи подключаться не с машины отличной от сервер;
-```
+
+CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'netology2023'; - создал пользователя sys_temp с паролем netology2023;  
+CREATE USER 'sys_temp'@'192.168.31.141' IDENTIFIED BY 'netology2023'; - создал пользователя sys_temp с паролем netology2023, где 192.168.31.141 - адрес клиента откуда будет подключаться DBeaver, в случае, если планируем подключаться с машины отличной от сервер;  
+
 
 ![2](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-2.png)
 
-```
-SHOW GRANTS FOR 'sys_temp'@'localhost'; - проверю права доступа
-```
+
+SHOW GRANTS FOR 'sys_temp'@'localhost'; - проверю права доступа  
+
 
 ![3](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-3.png)
 
-```
-GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost'; - выдал полные права
-GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'192.168.31.141'; - выдал полные права, где 192.168.31.141 - адрес клиента откуда будет подключаться DBeaver, в случаес, если планируеи подключаться не с машины отличной от сервер;
-SHOW GRANTS FOR 'sys_temp'@'localhost'; - проверю права доступа;
-```
+
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost'; - выдал полные права  
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'192.168.31.141'; - выдал полные права, где 192.168.31.141 - адрес клиента откуда будет подключаться DBeaver, в случае, если планируем подключаться с машины отличной от сервер;  
+SHOW GRANTS FOR 'sys_temp'@'localhost'; - проверю права доступа;  
+
 
 ![4](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-4.png)
 
-```
-mysql -u sys_temp -p - подключился к БД под sys_temp
-mysql> ALTER USER 'sys_temp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'netology2023'; - смены типа аутентификации с sha2
-```
 
-Настройка DBeaver для подключения к mySQL
+mysql -u sys_temp -p - подключился к БД под sys_temp  
+mysql> ALTER USER 'sys_temp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'netology2023'; - смены типа аутентификации с sha2  
+
+
+Настройка DBeaver для подключения к mySQL  
 
 ![5](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-5.png)
 ![6](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-6.png)
@@ -136,20 +136,20 @@ store                 |  store_id
 
 ### Ответ
 
-```
-mysql> GRANT ALL PRIVILEGES ON sakila.* TO 'sys_temp'@'192.168.31.141'; - выдал полные права на базу sakila
-Query OK, 0 rows affected (0.01 sec)
 
-mysql> REVOKE INSERT, DELETE, UPDATE, DROP ON sakila.* FROM sys_temp@192.168.31.141; - убрал права на базу sakila
-Query OK, 0 rows affected (0.02 sec)
+mysql> GRANT ALL PRIVILEGES ON sakila.* TO 'sys_temp'@'192.168.31.141'; - выдал полные права на базу sakila  
+Query OK, 0 rows affected (0.01 sec)  
 
-INSERT - вставлять данные в таблицу;
-DELETE - удалять данные из таблицы;
-UPDATE - обновлять данные в таблице;
-DROP - удалять таблицы;
-```
+mysql> REVOKE INSERT, DELETE, UPDATE, DROP ON sakila.* FROM sys_temp@192.168.31.141; - убрал права на базу sakila  
+Query OK, 0 rows affected (0.02 sec)  
 
-mysql> SHOW GRANTS FOR 'sys_temp'@'192.168.31.141';
+INSERT - вставлять данные в таблицу;  
+DELETE - удалять данные из таблицы;  
+UPDATE - обновлять данные в таблице;  
+DROP - удалять таблицы;  
+
+
+mysql> SHOW GRANTS FOR 'sys_temp'@'192.168.31.141';  
 
 ![9](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-9.png)
 
