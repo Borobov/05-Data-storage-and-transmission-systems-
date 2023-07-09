@@ -121,3 +121,23 @@ store                 |  store_id
 3.2. Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)
 
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
+
+### Ответ
+
+```
+mysql> GRANT ALL PRIVILEGES ON sakila.* TO 'sys_temp'@'192.168.31.141'; - выдал полные права на базу sakila
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> REVOKE INSERT, DELETE, UPDATE, DROP ON sakila.* FROM sys_temp@192.168.31.141; - убрал права на базу sakila
+Query OK, 0 rows affected (0.02 sec)
+
+INSERT - вставлять данные в таблицу;
+DELETE - удалять данные из таблицы;
+UPDATE - обновлять данные в таблице;
+DROP - удалять таблицы;
+```
+
+mysql> SHOW GRANTS FOR 'sys_temp'@'192.168.31.141';
+
+
+
