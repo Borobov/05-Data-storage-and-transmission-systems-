@@ -78,6 +78,14 @@ mysql -u sys_temp -p - подключился к БД под sys_temp
 mysql> ALTER USER 'sys_temp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'netology2023'; - смены типа аутентификации с sha2
 ```
 
+Настройка DBeaver для подключения к mySQL
+
+![5](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-5.png)
+![6](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-6.png)
+
+![7](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-7.png)
+![8](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-8.png)
+
 ### Задание 2
 Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца: в первом должны быть названия таблиц восстановленной базы, во втором названия первичных ключей этих таблиц. Пример: (скриншот/текст)
 ```
@@ -143,5 +151,5 @@ DROP - удалять таблицы;
 
 mysql> SHOW GRANTS FOR 'sys_temp'@'192.168.31.141';
 
-
+![9](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-9.png)
 
