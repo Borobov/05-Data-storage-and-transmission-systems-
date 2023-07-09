@@ -1,4 +1,4 @@
-![изображение](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/assets/122168309/40a0a6ea-27d0-4416-a58e-e3df55afca87)# Домашнее задание к занятию «Работа с данными (DDL/DML)»
+Домашнее задание к занятию «Работа с данными (DDL/DML)»
 
 ### Боробов Иван Сергеевич
 
@@ -41,35 +41,39 @@ sudo apt install ./mysql-apt-config_0.8.22-1_all.deb
 sudo apt update
 sudo apt install mysql-server
 systemctl status mysql
-
- mysql.service - MySQL Community Server
-     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
-     Active: active (running) since Sun 2023-07-09 02:35:25 EDT; 1min 16s ago
-       Docs: man:mysqld(8)
-             http://dev.mysql.com/doc/refman/en/using-systemd.html
-   Main PID: 5423 (mysqld)
-     Status: "Server is operational"
-      Tasks: 37 (limit: 4643)
-     Memory: 366.4M
-        CPU: 1.263s
-     CGroup: /system.slice/mysql.service
-             └─5423 /usr/sbin/mysqld
 ```
+![0](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-0.png)
 
-2. Проверяю списоу существующих пользователей
+2. Проверяю список существующих пользователей
 ```
 mysql -u root -p
-SELECT User, Host FROM mysql.user; - полчил список всех пользователей
+SELECT User, Host FROM mysql.user; - получил список всех пользователей
+```
+
+![1](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-1.png)
+
+```
 CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'netology2023'; - создал пользователя sys_temp с паролем netology2023;
 CREATE USER 'sys_temp'@'192.168.31.141' IDENTIFIED BY 'netology2023'; - создал пользователя sys_temp с паролем netology2023, где 192.168.31.141 - адрес клиента откуда будет подключаться DBeaver, в случаес, если планируеи подключаться не с машины отличной от сервер;
+```
 
+![2](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-2.png)
+
+```
 SHOW GRANTS FOR 'sys_temp'@'localhost'; - проверю права доступа
-img
+```
+
+![3](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-3.png)
+
+```
 GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost'; - выдал полные права
 GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'192.168.31.141'; - выдал полные права, где 192.168.31.141 - адрес клиента откуда будет подключаться DBeaver, в случаес, если планируеи подключаться не с машины отличной от сервер;
-
 SHOW GRANTS FOR 'sys_temp'@'localhost'; - проверю права доступа;
-img
+```
+
+![4](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-4.png)
+
+```
 mysql -u sys_temp -p - подключился к БД под sys_temp
 mysql> ALTER USER 'sys_temp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'netology2023'; - смены типа аутентификации с sha2
 ```
