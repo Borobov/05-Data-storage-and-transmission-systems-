@@ -65,11 +65,11 @@ SHOW GRANTS FOR 'sys_temp'@'localhost'; - проверю права доступ
 
 ![3](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-3.png)
 
-
+```
 GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost'; - выдал полные права  
 GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'192.168.31.141'; - выдал полные права, где 192.168.31.141 - адрес клиента откуда будет подключаться DBeaver, в случае, если планируем подключаться с машины отличной от сервера;  
 SHOW GRANTS FOR 'sys_temp'@'localhost'; - проверю права доступа;  
-
+```
 
 ![4](https://github.com/Borobov/05-Data-storage-and-transmission-systems-/blob/88b372c62c7e00f627777301b37a2512cf5c5861/IMG-12-02/img-12-02-4.png)
 
